@@ -1,7 +1,5 @@
-# python
-python concept pos samples 
 
-
+https://www.javatpoint.com/python-tutorial
 
 >>> 10+20
 30
@@ -937,4 +935,4 @@ except:
 finally:
 	print("executing finally clause")	
 	
-
+	
