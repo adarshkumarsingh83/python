@@ -1,0 +1,13 @@
+
+### Python on mac terminal 
+
+$ python -V
+
+$ which python
+
+$ which pip3
+
+
+$ /usr/bin/python
+
+>>> exit()
