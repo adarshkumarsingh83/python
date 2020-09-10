@@ -5,11 +5,11 @@
 
 # Content 
 
-## [PYTHON BASIC LANG FUNDAMENTAL](https://github.com/adarshkumarsingh83/python/blob/master/1%20PYTHON_BASIC_README.md)
+### [PYTHON BASIC LANG FUNDAMENTAL](https://github.com/adarshkumarsingh83/python/blob/master/1%20PYTHON_BASIC_README.md)
 
-## [PYTHON OBJECT ORIENDED CONCEPTS](https://github.com/adarshkumarsingh83/python/blob/master/2%20PYTHON_OBJECT_ORITENTED_README.md)
+### [PYTHON OBJECT ORIENDED CONCEPTS](https://github.com/adarshkumarsingh83/python/blob/master/2%20PYTHON_OBJECT_ORITENTED_README.md)
 
-## [PYHTON EXCEPTION HANDLING ](https://github.com/adarshkumarsingh83/python/blob/master/3%20PYTHON_EXCEPTION_HANDLING_README.md)
+### [PYHTON EXCEPTION HANDLING ](https://github.com/adarshkumarsingh83/python/blob/master/3%20PYTHON_EXCEPTION_HANDLING_README.md)
 
 
 ---
