@@ -82,10 +82,10 @@ class GreetWorld(Resource):
 
 class DataService(Resource):
 	def get(self, id):
-		return {'messageId':'welcome to espark for id '+id }
+		return {'messageId':'welcome to espark for id '%id }
 
 	def put(self, name):
-	 	return {'messageId':'welcome to espark for name '+name }
+	 	return {'messageId':'welcome to espark for name '%name }
 
 
 api.add_resource(GreetWorld, '/')
