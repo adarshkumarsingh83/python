@@ -6,9 +6,11 @@
 * S/W installation for web base pyhton 
 
 ---
+## website url
+* https://flask.palletsprojects.com/en/1.1.x/
 
 ### Flask for basic rest api 
-* $ pip install Flask 
+* $ pip install Flask
 
 ## Exmaple 
 
@@ -89,5 +91,8 @@ api.add_resource(DataService, '/data/<int:id>')
 if __name__ == '__main__':
     app.run(debug=True)
 ```
+
+### To Run app 
+* python WishService.py 
 
 ---
