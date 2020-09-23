@@ -157,6 +157,54 @@ adarshkumar
 espark espark espark espark espark
 ```
 
+## String functions 
+```
+capitalize()	Converts the first character to upper case
+casefold()		Converts string into lower case
+center()		Returns a centered string
+count()	  		Returns the number of times a specified value occurs in a string
+encode()		Returns an encoded version of the string
+endswith()		Returns true if the string ends with the specified value
+expandtabs()	Sets the tab size of the string
+find()			Searches the string for a specified value and returns the position of where it was found
+format()		Formats specified values in a string
+format_map()	Formats specified values in a string
+index()			Searches the string for a specified value and returns the position of where it was found
+isalnum()		Returns True if all characters in the string are alphanumeric
+isalpha()		Returns True if all characters in the string are in the alphabet
+isdecimal()		Returns True if all characters in the string are decimals
+isdigit()		Returns True if all characters in the string are digits
+isidentifier()	Returns True if the string is an identifier
+islower()		Returns True if all characters in the string are lower case
+isnumeric()		Returns True if all characters in the string are numeric
+isprintable()	Returns True if all characters in the string are printable
+isspace()		Returns True if all characters in the string are whitespaces
+istitle()		Returns True if the string follows the rules of a title
+isupper()		Returns True if all characters in the string are upper case
+join()			Joins the elements of an iterable to the end of the string
+ljust()			Returns a left justified version of the string
+lower()			Converts a string into lower case
+lstrip()		Returns a left trim version of the string
+maketrans()		Returns a translation table to be used in translations
+partition()		Returns a tuple where the string is parted into three parts
+replace()		Returns a string where a specified value is replaced with a specified value
+rfind()			Searches the string for a specified value and returns the last position of where it was found
+rindex()		Searches the string for a specified value and returns the last position of where it was found
+rjust()			Returns a right justified version of the string
+rpartition()	Returns a tuple where the string is parted into three parts
+rsplit()		Splits the string at the specified separator, and returns a list
+rstrip()		Returns a right trim version of the string
+split()			Splits the string at the specified separator, and returns a list
+splitlines()	Splits the string at line breaks and returns a list
+startswith()	Returns true if the string starts with the specified value
+strip()			Returns a trimmed version of the string
+swapcase()		Swaps cases, lower case becomes upper case and vice versa
+title()			Converts the first character of each word to upper case
+translate()		Returns a translated string
+upper()			Converts a string into upper case
+zfill()			Fills the string with a specified number of 0 values at the beginning
+```
+
 ## List Type in python 
 * it can hold hetrogenious data types value
 * empty list is the valid  in python
@@ -269,20 +317,21 @@ espark espark espark espark espark
 ```
 
 ## Function in List
-* min(list)	Returns the minimum value from the list given.
-* max(list)	Returns the largest value from the given list.
-* len(list)	Returns number of elements in a list.
-* cmp(list1,list2)	Compares the two list.
-* list(sequence)	Takes sequence types and converts them to lists.
-* index(object)	Returns the index value of the object.
-* count(object)	It returns the number of times an object is repeated in list.
-* pop()/pop(index)	Returns the last object or the specified indexed object. It removes the popped object.
+```
+* min(list)	            Returns the minimum value from the list given.
+* max(list)	            Returns the largest value from the given list.
+* len(list)	            Returns number of elements in a list.
+* cmp(list1,list2)	    Compares the two list.
+* list(sequence)	    Takes sequence types and converts them to lists.
+* index(object)			Returns the index value of the object.
+* count(object)			It returns the number of times an object is repeated in list.
+* pop()/pop(index)		Returns the last object or the specified indexed object. It removes the popped object.
 * insert(index,object)	Insert an object at the given index.
-* extend(sequence)	It adds the sequence to existing list.
-* remove(object)	It removes the object from the given List.
-* reverse()	Reverse the position of all the elements of a list.
-* sort()	It is used to sort the elements of the List.
-
+* extend(sequence)		It adds the sequence to existing list.
+* remove(object)		It removes the object from the given List.
+* reverse()				Reverse the position of all the elements of a list.
+* sort()				It is used to sort the elements of the List.
+```
 ---
 
 ## Python Tuple
@@ -303,11 +352,13 @@ espark espark espark espark espark
 ```
 
 ## Functions in Tuple 
-* min(tuple)	Returns the minimum value from a tuple.
-* max(tuple)	Returns the maximum value from the tuple.
-* len(tuple)	Gives the length of a tuple
+```
+* min(tuple)	        Returns the minimum value from a tuple.
+* max(tuple)	        Returns the maximum value from the tuple.
+* len(tuple)	        Gives the length of a tuple
 * cmp(tuple1,tuple2)	Compares the two Tuples.
-* tuple(sequence)	Converts the sequence into tuple.
+* tuple(sequence)	    Converts the sequence into tuple.
+```
 
 ---
 
@@ -351,20 +402,22 @@ name adarsh
 ```
 
 ## Functions in Dictionaries
-* len(dictionary)	Gives number of items in a dictionary.
-* cmp(dictionary1,dictionary2)	Compares the two dictionaries.
-* str(dictionary)	Gives the string representation of a string.
-* keys()	Return all the keys element of a dictionary.
-* values()	Return all the values element of a dictionary.
-* items()	Return all the items(key-value pair) of a dictionary.
-* update(dictionary2)	It is used to add items of dictionary2 to first dictionary.
-* clear()	It is used to remove all items of a dictionary. It returns an empty dictionary.
-* fromkeys(sequence,value1)/ fromkeys(sequence)	It is used to create a new dictionary from the sequence 
-	where sequence elements forms the key and all keys share the values ?value1?. In case value1 is not give, it set the values of keys to be none.
-* copy()	It returns an ordered copy of the data.
-* has_key(key)	It returns a boolean value. True in case if key is present in the dictionary ,else false.
-* get(key)	Returns the value of the given key. If key is not present it returns none.
-
+```
+* len(dictionary)	             Gives number of items in a dictionary.
+* cmp(dictionary1,dictionary2)	 Compares the two dictionaries.
+* str(dictionary)	             Gives the string representation of a string.
+* keys()	                     Return all the keys element of a dictionary.
+* values()	                     Return all the values element of a dictionary.
+* items()	                     Return all the items(key-value pair) of a dictionary.
+* update(dictionary2)	         It is used to add items of dictionary2 to first dictionary.
+* clear()	                     It is used to remove all items of a dictionary. It returns an empty dictionary.
+* fromkeys(sequence,value1)/ fromkeys(sequence)	
+                                 It is used to create a new dictionary from the sequence 
+	                             where sequence elements forms the key and all keys share the values ?value1?. In case value1 is not give, it set the values of keys to be none.
+* copy()	                     It returns an ordered copy of the data.
+* has_key(key)	                 It returns a boolean value. True in case if key is present in the dictionary ,else false.
+* get(key)	                     Returns the value of the given key. If key is not present it returns none.
+```
 ----
 
 ## Dque in python 
