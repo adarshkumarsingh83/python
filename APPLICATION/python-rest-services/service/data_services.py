@@ -1,14 +1,11 @@
-from flask import Flask, request
-from flask_restful import Resource, Api, reqparse
-
-app_data = Flask(__name__)
-api_data = Api(app_data)
-
-parser = reqparse.RequestParser()
-parser.add_argument('id')
+from flask import request
+from service.base_service import BaseServices
 
 
-class DataService(Resource):
+class DataService(BaseServices):
+
+    def __init__(self):
+        print('DataService constructor ')
 
     def get(self, id):
         print('get() execution ')
@@ -29,7 +26,4 @@ class DataService(Resource):
         return {'messageId': 'welcome to espark for id ' + id}
 
 
-api_data.add_resource(DataService, '/data', endpoint='post')
-api_data.add_resource(DataService, '/data/<id>', endpoint='get')
-api_data.add_resource(DataService, '/data/<id>', endpoint='put')
-api_data.add_resource(DataService, '/data/<id>', endpoint='delete')
+

@@ -1,14 +1,11 @@
-from flask import Flask
-from flask_restful import Resource, Api
-
-app_greet = Flask(__name__)
-api_greet = Api(app_greet)
+from service.base_service import BaseServices, app
 
 
-class GreetWorld(Resource):
+class GreetWorld(BaseServices):
+
+    def __init__(self):
+        print('GreetWorld constructor ')
 
     def get(self):
+        print('get() execution ')
         return {'messagge': 'welcome to espark'}
-
-
-api_greet.add_resource(GreetWorld, '/')
