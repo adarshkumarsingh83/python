@@ -5,14 +5,15 @@
 
 # Content 
 
-### [PYTHON BASIC LANG FUNDAMENTAL](https://github.com/adarshkumarsingh83/python/blob/master/1%20PYTHON_BASIC_README.md)
+### [PYTHON LANG FUNDATMENTAL](https://github.com/adarshkumarsingh83/python/blob/master/DOCUMENTS/0%20PYTHON_README.md)
 
-### [PYTHON OBJECT ORIENTED CONCEPTS](https://github.com/adarshkumarsingh83/python/blob/master/2%20PYTHON_OBJECT_ORITENTED_README.md)
+### [PYTHON BASIC LANG FUNDAMENTAL](https://github.com/adarshkumarsingh83/python/blob/master/DOCUMENTS/1%20PYTHON_BASIC_README.md)
 
-### [PYHTON EXCEPTION HANDLING ](https://github.com/adarshkumarsingh83/python/blob/master/3%20PYTHON_EXCEPTION_HANDLING_README.md)
+### [PYTHON OBJECT ORIENTED CONCEPTS](https://github.com/adarshkumarsingh83/python/blob/master/DOCUMENTS/2%20PYTHON_OBJECT_ORITENTED_README.md)
 
+### [PYHTON EXCEPTION HANDLING ](https://github.com/adarshkumarsingh83/python/blob/master/DOCUMENTS/3%20PYTHON_EXCEPTION_HANDLING_README.md)
 
-### [PYTHON RESTFUL SERVICES ](https://github.com/adarshkumarsingh83/python/blob/master/PYTHON_REST_SERVICE_README.md)
+### [PYTHON RESTFUL SERVICES ](https://github.com/adarshkumarsingh83/python/blob/master/DOCUMENTS/PYTHON_REST_SERVICE_README.md)
 
 ---
 
