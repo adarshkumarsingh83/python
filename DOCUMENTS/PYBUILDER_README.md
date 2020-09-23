@@ -50,3 +50,5 @@ print("welcome to espark")
 
 ## To build the code or rebuild 
 * $ pyb
+
+* $ pyb run_unit_tests

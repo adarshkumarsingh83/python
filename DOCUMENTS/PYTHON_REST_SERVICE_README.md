@@ -14,6 +14,8 @@
 
 ## Exmaple 
 
+##[PYTHON REST SERVCIES EXAMPLE ](https://github.com/adarshkumarsingh83/python/tree/master/APPLICATION/python-rest-services)
+
 * WishService.py 
 ```
 from flast import Flast, jsonify
@@ -101,6 +103,8 @@ if __name__ == '__main__':
 
 
 ## Exmaple 
+
+## [REST CRUD PYTHON EXAMPLE ](https://github.com/adarshkumarsingh83/python/tree/master/APPLICATION/python-rest-crud)
 
 *  api.py
 ```
