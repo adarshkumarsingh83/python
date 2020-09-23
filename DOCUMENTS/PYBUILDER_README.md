@@ -26,7 +26,7 @@
 ### Creating PyBuilder Project
 * $ mkdir python-pybuilder-app
 * $ cd python-pybuilder-app/
-* $ 
+* $ pyb --start-project
 ```
 Project name (default: 'python-pybuilder-app') : 
 Source directory (default: 'src/main/python') : 
