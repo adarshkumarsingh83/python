@@ -23,6 +23,9 @@
 ## to install pybuilder 
 * $  pip install pybuilder
 
+## to list the install packages 
+* $ pip list
+
 ### Creating PyBuilder Project
 * $ mkdir python-pybuilder-app
 * $ cd python-pybuilder-app/
