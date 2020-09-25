@@ -7,6 +7,10 @@
 
 ### [PYTHON PYBUILDER BUILD TOOL EXAMPLE](https://github.com/adarshkumarsingh83/python/tree/master/APPLICATION/python-pybuilder-app)
 
-### [PYTHON REST CRUD EXAMPLE ](https://github.com/adarshkumarsingh83/python/tree/master/APPLICATION/python-rest-crud) 
+### [PYTHON REST IN MEMOARY STORAGE CRUD EXAMPLE ](https://github.com/adarshkumarsingh83/python/tree/master/APPLICATION/python-rest-crud) 
+
+### [PYTHON REST SERVICE DOCKER EXAMPLE](https://github.com/adarshkumarsingh83/python/tree/master/APPLICATION/python-docker)
+
+### [PYTHON MONGODB REST SERVICE CRUD EXAMPLE ](https://github.com/adarshkumarsingh83/python/tree/master/APPLICATION/python-rest-curd-mongodb)
 
 
