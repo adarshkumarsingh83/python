@@ -1,4 +1,4 @@
-from src.web.abstract_controller import AbstractController, app, log
+from src.web.abstract_controller import AbstractController, Response, json, app, log
 
 
 class GreetController(AbstractController):
@@ -10,4 +10,6 @@ class GreetController(AbstractController):
 @app.route("/")
 def get_welcome():
     log.info('GreetController get() execution ')
-    return {'message': 'welcome to espark'}
+    return Response(response=json.dumps({'message': 'welcome to espark'}),
+                    status=200,
+                    mimetype='application/json')
