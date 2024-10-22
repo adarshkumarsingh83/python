@@ -1,0 +1,19 @@
+{
+  "profiles": {
+    "dev": {
+      "host": "dev-host",
+      "port": "dev-port",
+      "url": "https://dev-server"
+    },
+     "qa": {
+      "host": "qa-host",
+      "port": "qa-port",
+      "url": "https://qa-server"
+    },
+     "prod": {
+      "host": "prod-host",
+      "port": "prod-port",
+      "url": "https://prod-server"
+    }
+  }
+}
