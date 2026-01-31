@@ -1,0 +1,22 @@
+# Python Modules Demo
+
+This project is a simple Python application that showcases the use of custom modules for basic greeting and wishing operations. It consists of a main script (`main.py`) that imports and utilizes two utility modules:
+
+- `GreetModule`: Contains a `Greet` class for generating personalized hello messages.
+- `WishModule`: Contains a `Wish` class for creating wish statements.
+
+## Usage
+
+Run the main script to see the modules in action:
+
+```bash
+python [main.py](http://_vscodecontentref_/0)
+
+
+### To RUN 
+* py main.py 
+
+```
+Hello, Adarsh kumar!
+Wish made: I wish for a new bike
+```
