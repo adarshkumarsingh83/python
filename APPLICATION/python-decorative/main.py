@@ -1,5 +1,6 @@
 from service.ServiceOne import ServiceOne
 from service.ServiceTwo import ServiceTwo
+from service.ServiceThree import ServiceThree
 
 
 def main():
@@ -10,6 +11,9 @@ def main():
     
     serviceTwo = ServiceTwo("MyServiceTwo")
     serviceTwo.performTaskTwo("MyServiceTwo->performTaskTwo")
+    
+    serviceThree = ServiceThree("MyServiceThree")
+    serviceThree.performTaskThree("MyServiceThree->performTaskThree")
     
     
 if __name__ == "__main__":
