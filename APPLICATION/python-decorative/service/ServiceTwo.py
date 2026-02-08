@@ -1,9 +1,6 @@
 import time
 import random
 
-
-
-
 class ServiceTwo:
     
     def __init__(self, name: str) -> None:

@@ -14,6 +14,7 @@ def main():
     
     serviceThree = ServiceThree("MyServiceThree")
     serviceThree.performTaskThree("MyServiceThree->performTaskThree")
+    serviceThree.performNewTask()
     
     
 if __name__ == "__main__":
