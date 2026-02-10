@@ -1,4 +1,5 @@
 from datetime import datetime
+from functools import wraps
 
 class GreetService:
     
@@ -15,7 +16,9 @@ class GreetService:
         else:
             return "Good evening"
     
+    @staticmethod
     def greet_with_time(function):
+        @wraps(function)
         def wrapper(*args, **kwargs):
             greeting = GreetService.greet_based_on_time()
             kwargs['wish'] = greeting
