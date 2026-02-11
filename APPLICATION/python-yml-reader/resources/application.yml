@@ -1,0 +1,21 @@
+com:
+  espark:
+    adarsh:
+      database:
+        driverClassName: com.mysql.cj.jdbc.Driver
+        url: jdbc:mysql://localhost:3306/adarshdb
+        username: root
+        password: root
+      user_setting:
+        username: adarsh
+        password: adarsh
+        name_list: [ adarsh, espark, springboot ]
+        contacts:
+          - 1
+          - 2
+          - 3
+      users:
+        - name: adarsh
+          email: adarsh@kumar
+        - name: espark
+          email: espark@kumar
