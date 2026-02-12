@@ -5,7 +5,7 @@ class GreetMessage:
         self.senderId = senderId
         self.content = content
         
-    def get_message(self)-> str:
+    def getGreeting(self)-> str:
         return self.content
     
     def __str__(self):
