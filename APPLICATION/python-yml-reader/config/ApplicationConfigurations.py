@@ -3,6 +3,7 @@ from dataclasses import dataclass
 from config.ConfigurationBean import ConfigurationBean ,DataBaseConfig, UserSetting, Users  
 
 class ApplicationConfigurations:
+    
     def __init__(self, config_file_path: str):
         self.config_file_path = config_file_path
         self.configurations = None
