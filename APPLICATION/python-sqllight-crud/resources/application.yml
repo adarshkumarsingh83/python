@@ -1,0 +1,10 @@
+com:
+  adarsh:
+    espark:
+      application:
+        appConfig:
+          appName: "Espark sqllight Application"
+        dbConfig:
+          dbPath: "db/store/espark.db"
+          dbScript: "db/script/espark.sql"
+      
