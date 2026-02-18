@@ -1,0 +1,24 @@
+com:
+  chase:
+    espark:
+      apis:
+        - name: "createEmployee"
+          baseUrl: "http://localhost:8000"
+          url: "/api/v1/employee"
+          httpMethod: "POST"
+        - name: "getEmployee"
+          baseUrl: "http://localhost:8000"
+          url: "/api/v1/employee/{id}"
+          httpMethod: "GET"
+        - name: "updateEmployee"
+          baseUrl: "http://localhost:8000"
+          url: "/api/v1/employee/{id}"
+          httpMethod: "PUT"
+        - name: "deleteEmployee"
+          baseUrl: "http://localhost:8000"
+          url: "/api/v1/employee/{id}"
+          httpMethod: "DELETE"
+        - name: "getAllEmployees"
+          baseUrl: "http://localhost:8000"
+          url: "/api/v1/employee"
+          httpMethod: "GET"

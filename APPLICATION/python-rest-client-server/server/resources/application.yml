@@ -1,0 +1,9 @@
+com:
+  adarsh:
+    espark:
+      application:
+        appConfig:
+          appName: "Espark Server Application"
+        dbConfig:
+          dbPath: "db/store/espark.db"
+          dbScript: "db/scripts/espark.sql"
