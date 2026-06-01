@@ -1,0 +1,12 @@
+[
+    {
+        "name":"Adarsh kumar",
+        "email":"adarsh.kumar@example.com",
+        "city":"dallas"
+    },
+    {
+        "name":"John Doe",
+        "email":"john.doe@example.com",
+        "city":"new york"   
+    }
+]
