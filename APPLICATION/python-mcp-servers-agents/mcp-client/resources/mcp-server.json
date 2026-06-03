@@ -1,0 +1,18 @@
+{
+    "mcp-list": {
+        "mcpServers": {
+            "mcp-greet-server": {
+                "url": "http://127.0.0.1:5000/sse",
+                "transport": "sse"
+            },
+            "mcp-data-server": {
+                "url": "http://127.0.0.1:7000/sse",
+                "transport": "sse"
+            },
+            "mcp-calculation-server": {
+                "url": "http://127.0.0.1:6000/sse",
+                "transport": "sse"
+            }
+        }
+    }
+}

@@ -39,27 +39,53 @@ def executeMain():
         print(greeting)
         textToSpeach.speak_text(greeting)
 
+        consecutive_errors = 0
+        max_consecutive_errors = 3
+        
         while True:
 
-            # Listen to user input
-            user_input = speachToText.listen_and_transcribe(model)
-            print(f"You said: {user_input}")
+            # Listen to user input with error handling
+            try:
+                user_input = speachToText.listen_and_transcribe(model, timeout=30)
+                
+                # Reset error counter on successful input
+                if user_input:
+                    consecutive_errors = 0
+                    print(f"You said: {user_input}")
 
-            # Check for exit commands
-            exit_keywords = ["bye", "stop", "good bye", "i am done"]
-            if any(keyword in user_input.lower() for keyword in exit_keywords):
-                username = getpass.getuser()
-                textToSpeach.speak_text(f"Goodbye, {username}! Have a great time ahead!")
-                logger.info(f"Goodbye! Exiting the application. {username}")
-                time.sleep(5)
-                break
+                    # Check for exit commands
+                    exit_keywords = ["bye", "stop", "good bye", "i am done"]
+                    if any(keyword in user_input.lower() for keyword in exit_keywords):
+                        username = getpass.getuser()
+                        textToSpeach.speak_text(f"Goodbye, {username}! Have a great time ahead!")
+                        logger.info(f"Goodbye! Exiting the application. {username}")
+                        time.sleep(2)
+                        break
 
-            # Query Ollama API
-            response = ollamaService.query_ollama(user_input)
-            print(f"Ollama: {response}")
+                    # Query Ollama API
+                    response = ollamaService.query_ollama(user_input)
+                    print(f"Ollama: {response}")
 
-            # Speak Ollama's response
-            textToSpeach.speak_text(response)
+                    # Speak Ollama's response
+                    textToSpeach.speak_text(response)
+                else:
+                    # Empty input, just continue
+                    logger.info("No speech detected, continuing...")
+                    consecutive_errors = 0
+                    
+            except Exception as e:
+                consecutive_errors += 1
+                logger.error(f"Error during speech recognition (attempt {consecutive_errors}/{max_consecutive_errors}): {e}")
+                print(f"Error: {e}")
+                
+                if consecutive_errors >= max_consecutive_errors:
+                    logger.error("Too many consecutive errors. Please check your Bluetooth headphone connection and try again.")
+                    textToSpeach.speak_text("There seems to be an issue with the audio input. Please check your Bluetooth headphone connection and restart the application.")
+                    break
+                
+                # Wait before retrying
+                print("Retrying in 2 seconds...")
+                time.sleep(2)
 
     except KeyboardInterrupt:
         logger.error("\nExiting. Goodbye!")
