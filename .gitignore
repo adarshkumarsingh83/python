@@ -6,6 +6,11 @@ __pycache__/
 # C extensions
 *.so
 
+./APPLICATION/*/.DS_Store
+./APPLICATION/*/*/.DS_Store
+./APPLICATION/*/*/*/.DS_Store
+./APPLICATION/*/*/*/*/.DS_Store
+
 # Distribution / packaging
 .Python
 build/
@@ -127,3 +132,5 @@ dmypy.json
 
 # Pyre type checker
 .pyre/
+
+/APPLICATION/Speach_to_text_ollama-main/model/
