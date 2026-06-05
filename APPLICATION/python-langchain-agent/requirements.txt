@@ -1,0 +1,5 @@
+langchain            # provides langchain.agents.create_agent
+langchain-community  # provides community tools/utilities (deprecation warning suppressed in code)
+langchain-ollama     # provides ChatOllama
+ddgs                 # backend for DuckDuckGoSearchResults
+wikipedia            # backend for WikipediaQueryRun
