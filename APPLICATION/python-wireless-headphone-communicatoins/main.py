@@ -19,7 +19,11 @@ try:
 
         while True:
             print("Speak now! Say 'stop' to exit.")
-            audio = recognizer.listen(source, timeout=10)
+            try:
+                audio = recognizer.listen(source, timeout=10)
+            except sr.WaitTimeoutError:
+                print("No speech detected within the timeout window. Please try again.")
+                continue
 
             try:
                 # Using Google's Web Speech API for transcription
@@ -36,6 +40,8 @@ try:
                 print("Speaking back through headphones...")
                 subprocess.run(["say", text])
 
+            except sr.WaitTimeoutError:
+                print("No speech detected within the timeout window. Please try again.")
             except sr.UnknownValueError:
                 print("Google Web Speech API could not understand the audio.")
             except sr.RequestError as e:
