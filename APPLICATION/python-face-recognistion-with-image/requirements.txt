@@ -1,0 +1,4 @@
+face_recognition_models
+face_recognition
+opencv-python
+setuptools<81  # provides pkg_resources, removed from setuptools 81+ (needed by face_recognition_models)
