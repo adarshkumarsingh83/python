@@ -1,19 +1,51 @@
+import os
+import glob
+
 import cv2
+import numpy as np
 import face_recognition
 
-# Load your profile picture and encode it
-known_image = face_recognition.load_image_file("./img/adarsh.jpg")
-known_face_encoding = face_recognition.face_encodings(known_image)[0]
-
-# Create arrays of known face encodings and their names
-known_face_encodings = [known_face_encoding]
-known_face_names = ["adarsh"]
-
-# Initialize webcam
-video_capture = cv2.VideoCapture(0)
+# Folder that holds one (or more) reference picture(s) per person.
+# Each image filename (without extension) is used as that person's name,
+# e.g. img/shakti.jpg -> "shakti", img/adarsh.jpg -> "adarsh".
+KNOWN_FACES_DIR = "./img"
 
 
-def recognize_face(face_encoding):
+def load_known_faces(directory):
+    """Load and encode every image in `directory` as a known person.
+
+    Returns two parallel lists: the face encodings and their names.
+    Images where no face can be detected are skipped with a warning.
+    """
+    known_face_encodings = []
+    known_face_names = []
+
+    image_paths = []
+    for ext in ("*.jpg", "*.jpeg", "*.png"):
+        image_paths.extend(glob.glob(os.path.join(directory, ext)))
+
+    for image_path in sorted(image_paths):
+        name = os.path.splitext(os.path.basename(image_path))[0]
+        image = face_recognition.load_image_file(image_path)
+        encodings = face_recognition.face_encodings(image)
+
+        if not encodings:
+            print(f"[WARN] No face found in {image_path}, skipping.")
+            continue
+
+        # Use the first face found in each reference image.
+        known_face_encodings.append(encodings[0])
+        known_face_names.append(name)
+        print(f"[INFO] Loaded known face: {name}")
+
+    return known_face_encodings, known_face_names
+
+
+def recognize_faces(known_face_encodings, known_face_names, tolerance=0.5):
+    """Match every face in the live video against all known people."""
+    # Initialize webcam
+    video_capture = cv2.VideoCapture(0)
+
     while True:
         # Grab a single frame of video
         ret, frame = video_capture.read()
@@ -29,14 +61,16 @@ def recognize_face(face_encoding):
 
         # Loop through each face found in this frame
         for (top, right, bottom, left), face_encoding in zip(face_locations, face_encodings):
-            # See if the face is a match for the known face(s)q
-            matches = face_recognition.compare_faces(known_face_encodings, face_encoding)
             name = "unknown"
 
-            # If a match was found in known_face_encodings, use the first one.
-            if True in matches:
-                first_match_index = matches.index(True)
-                name = known_face_names[first_match_index]
+            if known_face_encodings:
+                # Compare this face against every known person and pick the closest match.
+                face_distances = face_recognition.face_distance(known_face_encodings, face_encoding)
+                best_match_index = int(np.argmin(face_distances))
+
+                # Only accept the match if it is within the tolerance threshold.
+                if face_distances[best_match_index] <= tolerance:
+                    name = known_face_names[best_match_index]
 
             # Draw a box around the face
             cv2.rectangle(frame, (left, top), (right, bottom), (0, 255, 0), 2)
@@ -59,4 +93,8 @@ def recognize_face(face_encoding):
 
 
 if __name__ == "__main__":
-    recognize_face(known_face_encodings)
+    known_face_encodings, known_face_names = load_known_faces(KNOWN_FACES_DIR)
+    if not known_face_encodings:
+        print("[ERROR] No known faces loaded. Add images to", KNOWN_FACES_DIR)
+    else:
+        recognize_faces(known_face_encodings, known_face_names)
