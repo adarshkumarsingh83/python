@@ -1,5 +1,0 @@
-pyaudio
-vosk 
-requests 
-pyttsx3 
-pyaudio
