@@ -1,0 +1,16 @@
+# Model files - do not commit anything under the model directory
+model/
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+
+# Virtual environments
+.venv/
+venv/
+env/
+
+# OS
+.DS_Store
