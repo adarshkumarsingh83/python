@@ -1,0 +1,24 @@
+{
+  "documents": [
+    "add tool is used to add two numbers",
+    "subtract tool is used to subtract two numbers",
+    "multiply tool is used to multiply two numbers",
+    "divide tool is used to divide two numbers",
+    "compare tool is used to compare two numbers",
+    "data tool is used to store and retrieve data",
+    "greet tool is used to wish users "
+  ],
+   "metadatas": [
+    {"category": "tools"},
+    {"category": "tools"},
+    {"category": "tools"},
+    {"category": "tools"},
+    {"category": "tools"},
+    {"category": "tools"},
+    {"category": "tools"}
+  ],
+  "ids": [
+    "id1", "id3", "id4", "id5",
+    "id6", "id7", "id8"
+  ]
+}

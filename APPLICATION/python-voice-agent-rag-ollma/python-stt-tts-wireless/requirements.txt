@@ -1,0 +1,7 @@
+chromadb
+fastmcp
+ollama
+requests
+pyttsx3
+vosk
+sounddevice

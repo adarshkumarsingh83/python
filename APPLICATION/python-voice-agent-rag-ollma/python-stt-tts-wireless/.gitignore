@@ -1,0 +1,19 @@
+# Model files - do not commit anything under the model directory
+model/
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+
+# Virtual environments
+.venv/
+venv/
+env/
+
+# Chroma vector database - generated at runtime, do not commit
+my_chroma_db/
+
+# OS
+.DS_Store
