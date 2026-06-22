@@ -1,0 +1,6 @@
+# Python dependencies for live_ocr.py
+# NOTE: the Tesseract OCR *engine* (native binary) must be installed separately.
+# See the README for OS-specific instructions.
+
+opencv-python>=4.5
+pytesseract>=0.3.10
