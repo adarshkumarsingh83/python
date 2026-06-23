@@ -91,3 +91,14 @@ python qr_reader.py image ./resources/adarsh.png
 - **Exit codes** — `0` on success, `1` on error (empty input or cancelled).
 - **Tuning** — error correction, `box_size`, `border`, and colors can be
   adjusted in `generate_qr()`. See [WIKI.md](WIKI.md) for the full reference.
+
+
+### work log 
+```
+(.venv) adarshkumar@adarshs-MacBook-Pro-16-new python-qrcode-reader % python qr_generator.py "https://github.com/radha" radha   
+QR code saved to: /Volumes/WORK/GIT/python/APPLICATION/python-qrcode-reader/resources/radha.png
+Encoded data:     'https://github.com/radha'
+(.venv) adarshkumar@adarshs-MacBook-Pro-16-new python-qrcode-reader % python3  qr_reader.py image ./resources/radha.png 
+[1] https://github.com/radha
+(.venv) adarshkumar@adarshs-MacBook-Pro-16-new python-qrcode-reader % 
+```
