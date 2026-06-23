@@ -1,0 +1,7 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(python3 -c \"import barcode; print\\('python-barcode', barcode.__version__\\)\")"
+    ]
+  }
+}

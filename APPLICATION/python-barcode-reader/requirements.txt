@@ -1,0 +1,3 @@
+python-barcode>=0.15.1
+pillow>=9.0.0
+pyzbar>=0.1.9

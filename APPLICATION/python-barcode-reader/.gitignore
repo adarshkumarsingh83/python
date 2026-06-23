@@ -1,0 +1,66 @@
+# ---------------------------------------------------------------------------
+# .gitignore for the Python Barcode Generator & Reader project
+# ---------------------------------------------------------------------------
+
+# --- Byte-compiled / optimized / cache files ---
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+
+# --- Virtual environments ---
+.venv/
+venv/
+env/
+ENV/
+.python-version
+
+# --- Packaging / build artifacts ---
+build/
+dist/
+*.egg-info/
+.eggs/
+*.egg
+pip-wheel-metadata/
+
+# --- Testing / coverage / type-checking caches ---
+.pytest_cache/
+.tox/
+.nox/
+.coverage
+.coverage.*
+htmlcov/
+.mypy_cache/
+.ruff_cache/
+.cache/
+
+# --- IDE / editor settings ---
+.idea/
+.vscode/
+*.swp
+*.swo
+*~
+
+# --- OS-generated files ---
+.DS_Store
+.DS_Store?
+._*
+Thumbs.db
+ehthumbs.db
+desktop.ini
+
+# --- Generated barcode images ---
+# This project writes barcode PNGs into resources/. They are build artifacts,
+# so they are ignored by default. The directory itself is kept (via the
+# committed .gitkeep) so the tools have somewhere to write.
+#
+# If you DO want to commit the demo images shown in the README, delete the
+# line below or add explicit exceptions, e.g.:
+#     !resources/demo_*.png
+resources/*.png
+!resources/.gitkeep
+
+# --- Misc local / secret files ---
+*.log
+.env
+.env.local
